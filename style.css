@@ -15,13 +15,13 @@ body {
   height: 100%;
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(255, 0, 127, 0.05),
-    rgba(255, 0, 127, 0.05) 1px,
-    transparent 1px,
-    transparent 2px
+    rgba(255, 0, 127, 0.12),
+    rgba(255, 0, 127, 0.12) 2px,
+    transparent 2px,
+    transparent 4px
   );
   z-index: 1;
-  animation: flicker 120ms infinite;
+  animation: flicker 150ms infinite;
 }
 @keyframes flicker {
   0% { opacity: 0.1; }
