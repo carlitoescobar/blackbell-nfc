@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,8 +19,8 @@ body {
   z-index: 1;
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(255, 0, 127, 0.1),
-    rgba(255, 0, 127, 0.1) 2px,
+    rgba(255, 0, 127, 0.08),
+    rgba(255, 0, 127, 0.08) 2px,
     transparent 2px,
     transparent 4px
   );
@@ -33,9 +33,10 @@ body {
 .boot {
   font-family: 'Humane', monospace;
   color: #ff007f;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-align: center;
   margin-top: 40vh;
+  transition: opacity 0.3s ease;
 }
 .hidden {
   display: none;
@@ -46,7 +47,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 4rem 2rem;
+  padding: 3rem 1.5rem;
   min-height: 100vh;
   max-width: 900px;
   margin: 0 auto;
@@ -55,14 +56,20 @@ main {
 }
 .header-block h1 {
   font-family: 'VanguardCF', 'Impact', sans-serif;
-  font-size: 4rem;
+  font-size: 3.8rem;
   color: #ff007f;
   margin: 0;
+  line-height: 1;
 }
 .sub {
-  font-size: 1.2rem;
-  color: #999;
-  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #aaa;
+  margin-bottom: 2.5rem;
+}
+.label {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
 }
 .nav-block a {
   display: block;
@@ -70,29 +77,29 @@ main {
   color: #ff007f;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
-  padding: 1.25rem;
-  margin: 1rem 0;
+  font-size: 1.1rem;
+  padding: 1.1rem 1.5rem;
+  margin: 0.8rem 0;
   border-left: 6px solid #ff007f;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
   width: 100%;
   box-sizing: border-box;
 }
 .nav-block a:hover {
   background: #222;
+  border-left-color: #ff33a6;
 }
 .qr-block {
   margin-top: auto;
   text-align: center;
 }
-.qr-block p {
-  color: #ff007f;
-  font-family: 'Humane', monospace;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+.qr-block .label {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 .qr-block img {
-  width: 120px;
+  width: 110px;
 }
 footer {
   margin-top: 3rem;

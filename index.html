@@ -28,13 +28,14 @@
     </section>
 
     <section class="nav-block">
+      <p class="label">// TRANSMISSION CHANNELS</p>
       <a href="mailto:carlito@ahiddenempire.com">&gt; INITIATE TRANSMISSION</a>
       <a href="https://jiujitsuprints.com/shop" target="_blank">&gt; ACCESS MERCH ARRAY</a>
       <a href="https://t.me/carlito" target="_blank">&gt; CONTACT VIA SIGNAL</a>
     </section>
 
     <section class="qr-block">
-      <p>// SCAN FOR UPLINK</p>
+      <p class="label">// SCAN FOR UPLINK</p>
       <img src="oracle_ahiddenempire_qr.png" alt="QR Code" />
     </section>
 
@@ -44,9 +45,12 @@
   </main>
   <script>
     setTimeout(() => {
-      document.querySelector(".boot").style.display = "none";
-      document.querySelector("main").classList.remove("hidden");
-    }, 1600);
+      document.querySelector(".boot").style.opacity = "0";
+      setTimeout(() => {
+        document.querySelector(".boot").style.display = "none";
+        document.querySelector("main").classList.remove("hidden");
+      }, 300);
+    }, 1500);
   </script>
 </body>
 </html>
