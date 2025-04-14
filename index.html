@@ -3,33 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oracle Link</title>
+  <title>THE ORACLE / 0RCL-01</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    @font-face {
+      font-family: 'VanguardCF';
+      src: url('fonts/VanguardCF-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Humane';
+      src: url('fonts/Humane-Medium.woff2') format('woff2');
+    }
+  </style>
 </head>
 <body>
   <div class="scanlines"></div>
   <main>
-    <header>
+    <section class="header-block">
       <h1>THE ORACLE</h1>
-      <p class="tagline">A signal in the silence. A light in the void.</p>
-    </header>
-    <section class="links">
-      <a href="mailto:carlito@ahiddenempire.com" onclick="copyText('carlito@ahiddenempire.com')">📧 Email Me</a>
-      <a href="https://t.me/carlito" target="_blank">📡 Telegram</a>
-      <a href="https://jiujitsuprints.com/shop" target="_blank">🥋 Merch Store</a>
-      <a href="https://github.com/carlitoescobar" target="_blank">💻 GitHub</a>
+      <p class="sub">INTELLIGENCE NODE // 0RCL-01</p>
     </section>
-    <section class="qr-section">
-      <h2>Scan to Connect</h2>
-      <img src="oracle_ahiddenempire_qr.png" alt="QR Code to Oracle Page" />
+
+    <section class="nav-block">
+      <a href="mailto:carlito@ahiddenempire.com">&gt; INITIATE TRANSMISSION</a>
+      <a href="https://jiujitsuprints.com/shop" target="_blank">&gt; ACCESS MERCH ARRAY</a>
+      <a href="https://t.me/carlito" target="_blank">&gt; CONTACT VIA SIGNAL</a>
     </section>
+
+    <section class="qr-block">
+      <p>// SCAN FOR UPLINK</p>
+      <img src="oracle_ahiddenempire_qr.png" alt="QR Code" />
+    </section>
+
+    <footer>
+      node: 0RCL-01 | rev: 02A | status: PERSISTENT | comms: SECURE
+    </footer>
   </main>
-  <script>
-    function copyText(text) {
-      navigator.clipboard.writeText(text).then(() => {
-        alert("Copied: " + text);
-      });
-    }
-  </script>
 </body>
 </html>
