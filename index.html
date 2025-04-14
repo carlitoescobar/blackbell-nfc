@@ -18,7 +18,10 @@
 </head>
 <body>
   <div class="scanlines"></div>
-  <main>
+  <div class="boot">
+    <p>&gt; ORACLE NODE BOOTING...</p>
+  </div>
+  <main class="hidden">
     <section class="header-block">
       <h1>THE ORACLE</h1>
       <p class="sub">INTELLIGENCE NODE // 0RCL-01</p>
@@ -39,5 +42,11 @@
       node: 0RCL-01 | rev: 02A | status: PERSISTENT | comms: SECURE
     </footer>
   </main>
+  <script>
+    setTimeout(() => {
+      document.querySelector(".boot").style.display = "none";
+      document.querySelector("main").classList.remove("hidden");
+    }, 1600);
+  </script>
 </body>
 </html>
