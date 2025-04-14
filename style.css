@@ -2,12 +2,6 @@ body {
   background: #000;
   color: #fff;
   font-family: 'Humane', monospace;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .scanlines {
   pointer-events: none;
@@ -17,13 +11,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    rgba(255, 0, 127, 0.08),
-    rgba(255, 0, 127, 0.08) 2px,
-    transparent 2px,
-    transparent 4px
-  );
+  background-image: repeating-linear-gradient(to bottom, rgba(255, 0, 127, 0.1), rgba(255, 0, 127, 0.1) 2px, transparent 2px, transparent 4px);
   animation: flicker 150ms infinite;
 }
 @keyframes flicker {
@@ -31,81 +19,35 @@ body {
   50% { opacity: 0.2; }
 }
 .boot {
-  font-family: 'Humane', monospace;
-  color: #ff007f;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: center;
   margin-top: 40vh;
+  color: #ff007f;
   transition: opacity 0.3s ease;
 }
 .hidden {
   display: none;
 }
-main {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 3rem 1.5rem;
-  min-height: 100vh;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: left;
-  box-sizing: border-box;
+#tap-zone {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
-.header-block h1 {
-  font-family: 'VanguardCF', 'Impact', sans-serif;
-  font-size: 3.8rem;
-  color: #ff007f;
-  margin: 0;
-  line-height: 1;
+#secret-input {
+  margin-top: 2rem;
+  text-align: center;
 }
-.sub {
-  font-size: 1.1rem;
-  color: #aaa;
-  margin-bottom: 2.5rem;
-}
-.label {
-  font-size: 0.9rem;
-  color: #888;
-  margin-bottom: 0.5rem;
-}
-.nav-block a {
-  display: block;
+#secret-phrase {
   background: #111;
   color: #ff007f;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding: 1.1rem 1.5rem;
-  margin: 0.8rem 0;
-  border-left: 6px solid #ff007f;
-  transition: all 0.2s ease;
-  width: 100%;
-  box-sizing: border-box;
-}
-.nav-block a:hover {
-  background: #222;
-  border-left-color: #ff33a6;
-}
-.qr-block {
-  margin-top: auto;
-  text-align: center;
-}
-.qr-block .label {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-.qr-block img {
-  width: 110px;
-}
-footer {
-  margin-top: 3rem;
+  font-family: monospace;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-left: 4px solid #ff007f;
   font-size: 1rem;
-  color: #aaa;
-  font-family: 'Humane', monospace;
-  border-top: 1px solid #222;
-  padding-top: 1rem;
+  width: 80%;
+  max-width: 300px;
 }
