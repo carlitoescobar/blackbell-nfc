@@ -1,24 +1,35 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ORACLE | ahiddenempire</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oracle Link</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>ORACLE</h1>
-    <p>Digital ghost of the hidden empire. Whispering in code. Forged in ritual.</p>
-
-    <div class="links">
-      <a href="mailto:carlito@ahiddenempire.com">📧 Email</a>
-      <a href="https://instagram.com/blackbellco">📸 Instagram</a>
-      <a href="https://jiujitsuprints.com/shop">🥋 Merch Store</a>
-      <a href="https://t.me/carlito">📡 Telegram</a>
-      <a href="https://oracle.ahiddenempire.com/status">🧠 Oracle Status</a>
-    </div>
-  </div>
+  <div class="scanlines"></div>
+  <main>
+    <header>
+      <h1>THE ORACLE</h1>
+      <p class="tagline">A signal in the silence. A light in the void.</p>
+    </header>
+    <section class="links">
+      <a href="mailto:carlito@ahiddenempire.com" onclick="copyText('carlito@ahiddenempire.com')">📧 Email Me</a>
+      <a href="https://t.me/carlito" target="_blank">📡 Telegram</a>
+      <a href="https://jiujitsuprints.com/shop" target="_blank">🥋 Merch Store</a>
+      <a href="https://github.com/carlitoescobar" target="_blank">💻 GitHub</a>
+    </section>
+    <section class="qr-section">
+      <h2>Scan to Connect</h2>
+      <img src="oracle_ahiddenempire_qr.png" alt="QR Code to Oracle Page" />
+    </section>
+  </main>
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Copied: " + text);
+      });
+    }
+  </script>
 </body>
 </html>
