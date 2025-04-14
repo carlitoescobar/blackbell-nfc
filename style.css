@@ -6,6 +6,8 @@ body {
   padding: 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .scanlines {
   pointer-events: none;
@@ -43,7 +45,7 @@ main {
   margin: 0;
 }
 .sub {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #999;
   margin-bottom: 3rem;
 }
@@ -53,8 +55,9 @@ main {
   color: #ff007f;
   text-decoration: none;
   font-weight: bold;
-  padding: 1rem 2rem;
-  margin: 1rem 0;
+  font-size: 1.2rem;
+  padding: 1.25rem 2rem;
+  margin: 1.2rem 0;
   border-left: 6px solid #ff007f;
   transition: background 0.2s ease;
 }
@@ -68,7 +71,7 @@ main {
 .qr-block p {
   color: #ff007f;
   font-family: 'Humane', monospace;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 .qr-block img {
@@ -76,7 +79,7 @@ main {
 }
 footer {
   margin-top: 4rem;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: #aaa;
   font-family: 'Humane', monospace;
   border-top: 1px solid #222;
