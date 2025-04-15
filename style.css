@@ -203,7 +203,7 @@ h1.glitch {
   animation: glitchIn 0.6s forwards 0.75s, crtFlicker 3s infinite;
 }
 
-@keyframes glitchIn {
+ @keyframes glitchIn {
   0% {
     opacity: 0;
     transform: translateY(-20px) scale(0.98);
