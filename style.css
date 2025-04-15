@@ -136,3 +136,48 @@ footer {
 .hidden {
   display: none;
 }
+body.crt {
+  font-family: 'Humane', sans-serif;
+  color: #00ff9c;
+  background-color: #000;
+  text-align: center;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blacksite-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.blacksite-nav li {
+  margin: 1rem 0;
+}
+
+.blacksite-nav a {
+  color: #00ff9c;
+  text-decoration: none;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease;
+}
+
+.blacksite-nav a:hover {
+  color: #ff3cf4;
+}
+
+.back-link {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+h1.glitch {
+  font-size: 3rem;
+  letter-spacing: 0.06em;
+}
