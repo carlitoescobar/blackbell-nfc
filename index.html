@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="scanlines"></div>
-  <main>
+  <main class="hidden">
     <section class="header-block">
       <h1>THE ORACLE</h1>
       <p class="sub">INTELLIGENCE NODE // 0RCL-01</p>
@@ -23,12 +23,13 @@
       <p class="label">// SCAN FOR UPLINK</p>
       <img src="oracle_ahiddenempire_qr.png" alt="QR Code" />
     </section>
-    <section id="secret-input">
+    <section id="secret-input" class="hidden">
       <input id="secret-phrase" placeholder="Type command..." />
     </section>
     <footer>
       NODE: 0RCL-01 | REV: 02A | STATUS: PERSISTENT | COMMS: SECURE
     </footer>
   </main>
+  <script src="boot.js"></script>
 </body>
 </html>
