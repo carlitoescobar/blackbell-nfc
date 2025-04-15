@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    document.querySelector("main").classList.remove("hidden");
-  }, 2000);
+  let taps = 0;
+  const tapZone = document.getElementById("tap-zone");
+  const inputBlock = document.getElementById("secret-input");
 
-  setTimeout(() => {
-    const input = document.getElementById("secret-input");
-    if (input) input.classList.remove("hidden");
-  }, 3000);
+  tapZone.addEventListener("click", () => {
+    taps++;
+    if (taps >= 5) {
+      inputBlock.classList.remove("hidden");
+      taps = 0;
+    }
+  });
 });
