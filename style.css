@@ -1,11 +1,15 @@
-
-@font-face {
-  font-family: 'VanguardCF';
-  src: url('fonts/VanguardCF-Regular.woff2') format('woff2');
-}
 @font-face {
   font-family: 'Humane';
   src: url('fonts/Humane-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: url('https://cdn.jsdelivr.net/gh/IBM/plex@v6.3.0/IBM-Plex-Mono/fonts/complete/woff2/IBMPlexMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -51,7 +55,6 @@ main {
 }
 
 .header-block h1 {
-  font-family: 'VanguardCF', sans-serif;
   font-size: 2.8rem;
   line-height: 1.1;
   margin: 0 0 0.25rem 0;
@@ -77,7 +80,7 @@ main {
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Humane', sans-serif;
   padding: 0.9rem 1.2rem;
   margin: 0.5rem 0;
   font-weight: 600;
@@ -106,6 +109,7 @@ main {
 #secret-phrase {
   background: #111;
   color: #fff;
+  font-family: 'IBMPlexMono', monospace;
   padding: 0.6rem 1rem;
   border: none;
   border-left: 4px solid #fff;
@@ -120,5 +124,5 @@ footer {
   color: #777;
   border-top: 1px solid #222;
   padding-top: 1rem;
-  font-family: monospace;
+  font-family: 'IBMPlexMono', monospace;
 }
