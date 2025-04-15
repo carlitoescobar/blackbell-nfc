@@ -1,7 +1,14 @@
+@font-face {
+  font-family: 'HumaneExtraLight';
+  src: url('fonts/Humane-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
 body {
   background: #000;
   color: #fff;
-  font-family: 'Humane', monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -48,23 +55,26 @@ main {
   box-sizing: border-box;
 }
 .header-block h1 {
-  font-family: 'VanguardCF', 'Impact', sans-serif;
+  font-family: 'HumaneExtraLight', sans-serif;
   font-size: 3.8rem;
   color: #ff007f;
   margin: 0;
   line-height: 1;
 }
 .sub {
+  font-family: 'HumaneExtraLight', sans-serif;
   font-size: 1.1rem;
   color: #aaa;
   margin-bottom: 2.5rem;
 }
 .label {
+  font-family: 'HumaneExtraLight', sans-serif;
   font-size: 0.9rem;
   color: #888;
   margin-bottom: 0.5rem;
 }
 .nav-block a {
+  font-family: 'HumaneExtraLight', sans-serif;
   display: block;
   background: #111;
   color: #ff007f;
@@ -98,7 +108,6 @@ footer {
   margin-top: 3rem;
   font-size: 1rem;
   color: #aaa;
-  font-family: 'Humane', monospace;
   border-top: 1px solid #222;
   padding-top: 1rem;
 }
@@ -117,7 +126,7 @@ footer {
 #secret-phrase {
   background: #111;
   color: #ff007f;
-  font-family: monospace;
+  font-family: inherit;
   padding: 0.75rem 1rem;
   border: none;
   border-left: 4px solid #ff007f;
