@@ -58,6 +58,10 @@
       }, 300);
     }, 1500);
 
+	document.addEventListener("DOMContentLoaded", () => {
+  		document.querySelector('.scanlines')?.classList.add('active');
+	});
+
     // Konami Code to /blacksite
     let konami = [38,38,40,40,37,39,37,39,66,65];
     let input = [];
