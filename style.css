@@ -32,11 +32,12 @@ body {
     transparent 2px,
     transparent 4px
   );
-  animation: flicker 250ms infinite;
+animation: flicker 1.5s ease-in-out infinite;
+
 }
 @keyframes flicker {
-  0%, 100% { opacity: 0.15; }
-  50% { opacity: 0.3; }
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.2; }
 }
 
 .boot {
