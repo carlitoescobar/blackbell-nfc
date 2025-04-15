@@ -1,24 +1,22 @@
+
 @font-face {
-  font-family: 'HumaneExtraLight';
-  src: url('fonts/Humane-ExtraLight.woff2') format('woff2');
-  font-weight: 200;
-  font-style: normal;
+  font-family: 'VanguardCF';
+  src: url('fonts/VanguardCF-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Humane';
+  src: url('fonts/Humane-Medium.woff2') format('woff2');
 }
 
 body {
+  margin: 0;
   background: #000;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  font-family: 'Humane', sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
-.scanlines.active {
-  opacity: 1;
-}
+
 .scanlines {
   pointer-events: none;
   position: fixed;
@@ -27,92 +25,100 @@ body {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  opacity: 0;
   background-image: repeating-linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.12),
     rgba(255, 255, 255, 0.12) 2px,
-    transparent 1px,
-    transparent 3px
+    transparent 2px,
+    transparent 5px
   );
   background-blend-mode: lighten;
   animation: glitch-flicker 7.5s steps(1, end) infinite;
 }
+
 @keyframes glitch-flicker {
   0%, 3%, 5%, 8%, 70%, 72% { opacity: 0.18; }
   10%, 74%, 100% { opacity: 0; }
 }
 
-.header-block h1 {
-  font-family: 'HumaneExtraLight', sans-serif;
-  font-size: 3.8rem;
-  color: #fff;
-  margin: 0;
-  line-height: 1;
+main {
+  padding: 2rem 1.5rem;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
-.sub, .label {
-  font-family: 'HumaneExtraLight', sans-serif;
-  font-size: 1rem;
+
+.header-block h1 {
+  font-family: 'VanguardCF', sans-serif;
+  font-size: 2.8rem;
+  line-height: 1.1;
+  margin: 0 0 0.25rem 0;
+}
+
+.sub {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
   color: #aaa;
   margin-bottom: 1rem;
 }
+
+.label {
+  font-size: 0.75rem;
+  color: #777;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
 .nav-block a {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: block;
   background: #111;
   color: #fff;
   text-decoration: none;
-  font-size: 1.2rem;
-  padding: 1.25rem 1.5rem;
-  margin: 1rem 0;
+  font-size: 1rem;
+  font-family: Helvetica, sans-serif;
+  padding: 0.9rem 1.2rem;
+  margin: 0.5rem 0;
   font-weight: 600;
-  border-left: 6px solid #fff;
+  border-left: 4px solid #fff;
+  letter-spacing: 0.06em;
   transition: all 0.2s ease;
-  width: 100%;
-  box-sizing: border-box;
+  text-align: left;
 }
 .nav-block a:hover {
   background: #222;
   border-left-color: #ccc;
 }
+
 .qr-block {
-  margin-top: auto;
+  margin-top: 2rem;
   text-align: center;
 }
-.qr-block .label {
-  color: #ccc;
-}
 .qr-block img {
-  width: 120px;
-}
-footer {
-  margin-top: 3rem;
-  font-size: 1rem;
-  color: #777;
-  border-top: 1px solid #222;
-  padding-top: 1rem;
-  font-family: monospace;
-}
-#tap-zone {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  top: 0;
-  right: 0;
-  z-index: 10;
+  width: 100px;
+  margin: 0 auto 1rem;
 }
 #secret-input {
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-align: center;
 }
 #secret-phrase {
   background: #111;
   color: #fff;
-  font-family: inherit;
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 1rem;
   border: none;
   border-left: 4px solid #fff;
-  font-size: 1rem;
+  font-size: 0.9rem;
   width: 80%;
   max-width: 300px;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: #777;
+  border-top: 1px solid #222;
+  padding-top: 1rem;
+  font-family: monospace;
 }

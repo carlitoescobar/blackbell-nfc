@@ -1,117 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>THE ORACLE / 0RCL-01</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    @font-face {
-      font-family: 'VanguardCF';
-      src: url('fonts/VanguardCF-Regular.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Humane';
-      src: url('fonts/Humane-Medium.woff2') format('woff2');
-    }
-  </style>
 </head>
 <body>
   <div class="scanlines"></div>
-  <div class="boot">
-    <p>&gt; ORACLE NODE BOOTING...</p>
-  </div>
-  <div id="tap-zone"></div>
-  <main class="hidden">
+  <main>
     <section class="header-block">
       <h1>THE ORACLE</h1>
       <p class="sub">INTELLIGENCE NODE // 0RCL-01</p>
+      <p class="sub">// TRANSMISSION CHANNELS</p>
     </section>
-
     <section class="nav-block">
-      <p class="label">// TRANSMISSION CHANNELS</p>
-      <a href="mailto:carlito@ahiddenempire.com">&gt; INITIATE TRANSMISSION</a>
-      <a href="https://jiujitsuprints.com/shop" target="_blank">&gt; ACCESS MERCH ARRAY</a>
-      <a href="https://t.me/carlito" target="_blank">&gt; CONTACT VIA SIGNAL</a>
+      <a href="#">> INITIATE TRANSMISSION</a>
+      <a href="#">> ACCESS MERCH ARRAY</a>
+      <a href="#">> CONTACT VIA SIGNAL</a>
     </section>
-
     <section class="qr-block">
       <p class="label">// SCAN FOR UPLINK</p>
       <img src="oracle_ahiddenempire_qr.png" alt="QR Code" />
     </section>
-
-    <section id="secret-input" class="hidden">
-      <input type="text" id="secret-phrase" placeholder="Type command…" autocomplete="off"/>
+    <section id="secret-input">
+      <input id="secret-phrase" placeholder="Type command..." />
     </section>
-
     <footer>
-      node: 0RCL-01 | rev: 02A | status: PERSISTENT | comms: SECURE
+      NODE: 0RCL-01 | REV: 02A | STATUS: PERSISTENT | COMMS: SECURE
     </footer>
   </main>
-  <script>
-    // Boot transition
-    setTimeout(() => {
-      document.querySelector(".boot").style.opacity = "0";
-      setTimeout(() => {
-        document.querySelector(".boot").style.display = "none";
-        document.querySelector("main").classList.remove("hidden");
-      }, 300);
-    }, 1500);
-
-	document.addEventListener("DOMContentLoaded", () => {
-  		document.querySelector('.scanlines')?.classList.add('active');
-	});
-
-    // Konami Code to /blacksite
-    let konami = [38,38,40,40,37,39,37,39,66,65];
-    let input = [];
-    window.addEventListener("keydown", function(e) {
-      input.push(e.keyCode);
-      if (input.toString().indexOf(konami) >= 0) {
-        window.location.href = "/blacksite";
-        input = [];
-      }
-    });
-
-    // Whisper phrase triggers /status
-    let typed = "";
-    window.addEventListener("keypress", function(e) {
-      typed += e.key;
-      if (typed.toLowerCase().includes("i see everything")) {
-        window.location.href = "/status";
-      }
-      if (typed.length > 32) typed = typed.slice(-32);
-    });
-
-    // Tap zone logic for mobile
-    let tapCount = 0;
-    let lastTap = 0;
-    document.getElementById("tap-zone").addEventListener("click", () => {
-      let now = Date.now();
-      if (now - lastTap < 500) tapCount++;
-      else tapCount = 1;
-      lastTap = now;
-      if (tapCount >= 5) window.location.href = "/blacksite";
-    });
-
-    // Triple tap to reveal input field
-    let revealTapCount = 0;
-    document.body.addEventListener("click", () => {
-      revealTapCount++;
-      if (revealTapCount === 3) {
-        document.getElementById("secret-input").classList.remove("hidden");
-        revealTapCount = 0;
-      }
-      setTimeout(() => { revealTapCount = 0 }, 1500);
-    });
-
-    // Phrase field logic
-    const inputField = document.getElementById("secret-phrase");
-    inputField.addEventListener("input", function() {
-      if (this.value.toLowerCase().includes("i see everything")) {
-        window.location.href = "/status";
-      }
-    });
-  </script>
 </body>
 </html>
