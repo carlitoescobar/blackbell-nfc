@@ -27,17 +27,26 @@ body {
   z-index: 9999;
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(255, 0, 127, 0.2),
-    rgba(255, 0, 127, 0.2) 2px,
+    rgba(255, 0, 127, 0.15),
+    rgba(255, 0, 127, 0.15) 2px,
     transparent 2px,
     transparent 4px
   );
-animation: flicker 1.5s ease-in-out infinite;
-
+  opacity: 0;
+  animation: glitch-flicker 10s steps(1, end) infinite;
 }
-@keyframes flicker {
-  0%, 100% { opacity: 0.1; }
-  50% { opacity: 0.2; }
+
+@keyframes glitch-flicker {
+  0%   { opacity: 0.15; }
+  3%   { opacity: 0.25; }
+  5%   { opacity: 0.05; }
+  8%   { opacity: 0.3; }
+  10%  { opacity: 0; }
+  60%  { opacity: 0; }
+  70%  { opacity: 0.1; }
+  72%  { opacity: 0.3; }
+  74%  { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 .boot {
